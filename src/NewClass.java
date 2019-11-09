@@ -4,7 +4,6 @@ public class NewClass {
         System.out.println("Done");
         for(;;){
             System.out.println("Fine");
-            System.out.println("Right");
         }
     }
 }
