@@ -21,5 +21,25 @@ public class Solution {
             System.out.println("================================");
 
         }
+
+    static String timeConversion(String s) {
+        /*
+         * Write your code here.
+         */
+        String str = "";
+        if(s.toUpperCase().substring(s.length()-2).equals("PM")){
+            String [] arr = s.split(":");
+            for(int i = 0, j=1; i<12; i++,j++){
+                if(arr[0].equals(i+"")){
+                    str+="0"+j;
+                }
+            }
+        }
+       return str;
+    }
+
+
+
+
     }
 

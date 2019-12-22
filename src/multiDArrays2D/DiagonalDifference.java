@@ -1,9 +1,13 @@
 package multiDArrays2D;
 
+import mentoring.Methods;
+
 import java.util.Arrays;
 
 public class DiagonalDifference {
     public static void main(String[] args) {
+
+
 //        Random ran = new Random();
 ////        int [][] arrs = ran.nextInt();
 //        int [] [] arrNums = new int[3][4];

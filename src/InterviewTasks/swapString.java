@@ -1,6 +1,7 @@
 package InterviewTasks;
 
 public class swapString {
+
     public static void main(String[] args) {
 //reverseString("abracadabra");
         System.out.println(isPalindrome("Nurses Run"));

@@ -13,7 +13,6 @@ public class Grades {
             case 'a':
                 case'A':
                 System.out.println("Excellent!");
-                break;
             case 'b':
                 case'B':
                 System.out.println("Great");
