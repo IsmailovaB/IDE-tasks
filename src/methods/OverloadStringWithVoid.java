@@ -12,6 +12,7 @@ public class OverloadStringWithVoid {
         System.out.println(str.charAt(index));
     }
     public static int printString(String str, int num1, int num2){
+
         return str.substring(num1,num2).length();
     }
 }

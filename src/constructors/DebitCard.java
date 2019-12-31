@@ -12,9 +12,12 @@ public class DebitCard {
         this.holderName=holderName;
         this.balance=balance;
 
+
         if(cardNum.length()==16) {
             this.cardNumber = cardNumber;
+
         }else {
+
             System.out.println("Invalid Card Number");
         }
     }

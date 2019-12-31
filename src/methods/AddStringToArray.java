@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class AddStringToArray {
     public static void main(String[] args) {
+        AddNumsToString.addNums("345676",2);
         String[] arr = {"a", "e", "i", "o"};
 //        System.out.println(Arrays.toString(increaseArray(arr, "u")));
 //        System.out.println(Arrays.toString(increaseArrayWithClass(arr, "u")));

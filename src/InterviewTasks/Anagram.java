@@ -2,38 +2,61 @@ package InterviewTasks;
 
 import java.util.Arrays;
 
-public class IsAnagram {
+public class Anagram {
     public static void main(String[] args) {
-        System.out.println(isAnagram("listen", "silent"));
-        System.out.println(isAnagram2("march", "charm"));
+        System.out.println(isAnagram("namaz", "zaman"));
+//        System.out.println(isAnagram2("march", "carmh"));
+//        System.out.println(isAnagr("march", "charm"));
 
     }
 
     public static boolean isAnagr(String word1, String word2){
-        boolean check = false;
-        word1 = word1.toLowerCase();
-        word2 = word2.toLowerCase();
-        int counter =0;
-        int counter1 =0;
+
+        if(word1.length()!=word2.length()){
+            return false;
+        }
+        int w1 = 0;
+        int w2 = 0;
+
         for(int i=0; i<word1.length(); i++){
-            counter=0;
-            for(int k=0; k<word2.length(); k++){
-                if(word1.charAt(i) == word2.charAt(k) ){
-                    counter++;
-                }
-            }
-            if(counter == 1){
-                counter1++;
-            }
+            w1+=  word1.charAt(i);
+            w2+=  word2.charAt(i);
         }
-        if (counter1 == word1.length() && counter1 == word2.length() ){
-            check = true;
+        if(w1 == w2){
+            return true;
         }
-        return true;
+        return false;
     }
 
+
+//    public static boolean isAnagr(String word1, String word2){
+//        boolean check = false;
+//        word1 = word1.toLowerCase();
+//        word2 = word2.toLowerCase();
+//        int counter =0;
+//        int counter1 =0;
+//        for(int i=0; i<word1.length(); i++){
+//            counter=0;
+//            for(int k=0; k<word2.length(); k++){
+//                if(word1.charAt(i) == word2.charAt(k) ){
+//                    counter++;
+//                    if(counter > 1){
+//                        counter1++;
+//                    }
+//                }
+//            }
+//
+//        }
+//        if (counter1 == word1.length() && counter1 == word2.length() ){
+//            check = true;
+//        }
+//        return true;
+//    }
+
 //=================================================================================================================
-    public  static boolean isAnagram(String a, String b) {
+
+
+    public static boolean isAnagram (String a, String b){
         int count = 0;
 
         int len = a.length();
@@ -50,6 +73,7 @@ public class IsAnagram {
         if (count == len) return true;
         else return false;
     }
+
     //=================================================================================
 
         public static boolean isAnagram2 (String str1, String str2){

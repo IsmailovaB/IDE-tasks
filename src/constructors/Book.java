@@ -4,14 +4,15 @@ import codingBat.ArrayList;
 
 public class Book {
 
-    String title;
-    String author;
+     private String title;
+     String author;
     int page;
 //    Author author = new Author();
 //    int [] num;
 
     public Book(String title){
         this.title = title;
+
     }
     public Book(String title, String author){
         this(title);                //chaining constructor.(taking firtst cons-rs title)

@@ -19,6 +19,7 @@ public class ArraysSort {
     }
     public static String blogDb(ArrayList<String[]> r, String id)  {
 
+
         for(String [] s: r){
             for(int i=0; i<s.length; i++) {
                 if (s[i].equalsIgnoreCase(id)) {

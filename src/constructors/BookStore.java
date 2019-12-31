@@ -1,9 +1,13 @@
 package constructors;
 
+import codingBat.ArrayList;
+
 import java.util.Scanner;
 
 public class BookStore {
     public static void main(String[] args) {
+        Book book = new Book("fsab");
+
 //        Book book1 = new Book("Java", "cybertek", 200);
 //        Book book2 = new Book("Automation", "cybertek", 100);
 //        Book book3 = new Book("OCA", "java pr", 55);

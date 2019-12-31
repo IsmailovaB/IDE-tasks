@@ -60,7 +60,6 @@ public class BestPalindromeWay {
             end--;
         }
         return true;
-
     }
 
     public static boolean polindromeWithNumbers(long nums) {

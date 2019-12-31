@@ -5,29 +5,20 @@ import java.util.Arrays;
 
 public class test {
     public static void main(String[] args) {
-//        System.out.println(starOut("He**bhj***l*lo"));
-       int [] make = {4, 5} ;
-        int [] make1 = {1, 2, 3};
-        System.out.println(Arrays.toString(make2(make, make1)));
+//        System.out.println(starOut("He**bhj***l*lo")
+        System.out.println(oneTwo("asdnldvbjk"));
     }
-
-
-    public static int[] make2(int[] a, int[] b) {
-        int [] nums = new int [2];
-        int min=nums[0];
-        int max=nums[0];
-        for(int i=0; i<a.length+b.length; i++){
-            if(min>nums[i]){
-                min = nums[i];
+        public static String oneTwo(String str) {
+            String s="";
+            if(str.length()<3) return "";
+//            str = str.substring(1)+str.charAt(0);
+            if(str.length()>=4){
+                for(int i=0; i<str.length()-3; i+=3){
+                    s+=str.substring(i+1,i+3)+str.substring(i);
+                }
             }
-            if(max<nums[i]){
-                max = nums[i];
-            }
+            return str;
         }
-        nums[0] = min;
-        nums[1] = max;
-        return nums;
-    }
 
 
 //             if (str.charAt(i) == '*') {
@@ -39,8 +30,8 @@ public class test {
 
 
 //             s += str.charAt(i);
+    }
 
-         }
 
 //          s+=str.substring(0,)
 //            int i = 0;

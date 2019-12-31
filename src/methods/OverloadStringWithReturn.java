@@ -10,11 +10,11 @@ public class OverloadStringWithReturn {
 
         return str.charAt(0);
     }
-    public static char firstChar(String str,int index){
+    public static char firstChar(String str, int index){
 
         return str.charAt(index);
     }
-    public static int firstChar(String str,int num1,int num2){
+    public static int firstChar(String str, int num1, int num2){
         str=str.substring(num1,num2);
         return str.length();
     }

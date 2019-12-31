@@ -15,13 +15,14 @@ public class fullTree {
 //            System.out.println();
 //        }
 //        printHollowRect();
+        int n = 8;
 
-        for (int i = 1; i < 9; i++) {
-            for (int j = 9 - i; j > 0; j--) {
+        for (int i = 2; i < n; i++) {
+            for (int j = n - i; j > 0; j--) {
                 System.out.print(" ");
             }
-            for (int k = 0; k < 2 * i - 1; k++) {
-                System.out.print("*");
+            for (int k = 0; k < 1 * i - 1; k++) {
+                System.out.print("# ");
             }
 
             System.out.println();

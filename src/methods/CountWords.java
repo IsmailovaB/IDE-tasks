@@ -8,9 +8,9 @@ public class CountWords {
         System.out.println("Enter String:");
         String str = scan.nextLine();
         countWords(str);
+        countWords("gjh");
     }
-
-    public static void countWords(String str1) {
+    final static void countWords(String str1) {
     String [] words = str1.trim().split(" ");
         System.out.println("The number of words in the sentence is: " + words.length);
         // in array split, words.length it will give us the number of words.

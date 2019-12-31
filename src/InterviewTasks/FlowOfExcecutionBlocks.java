@@ -39,4 +39,26 @@ public class FlowOfExcecutionBlocks {
 
 
         }
+
+
+        A a = new A();
+    }
+
+class A{
+    int x;
+    int y;
+    A (){
+        this(5);
+        System.out.println("I am the first one");
+    }
+    A(int x){
+        this(x,5);
+        System.out.println("I am the second one");
+    }
+    A(int x, int y){
+        this.x=x;
+        this.y= y;
+        System.out.println("I am the 3th one");
+    }
 }
+
