@@ -25,9 +25,16 @@ public class BestPalindromeWay {
         System.out.println(isPalindromeBetterOne(s));         false:
 
         */
+  int a = 153;
+  int b = 100;
+  a = a+b;
+  b = a - b;
+  a = a - b;
 
+        System.out.println(a);
+        System.out.println(b);
 
-    }
+}
 
     static boolean isPalindromeBetterOne(String s) {
         boolean isPalindrome = true;
@@ -70,12 +77,14 @@ public class BestPalindromeWay {
         // num % 10 -> last digit of our number.
 
         while (workingNum != 0) {
-           long last =  workingNum % 10;
+            long last = workingNum % 10;
             reverse = reverse * 10 + last;
             workingNum /= 10;
         }
         return nums == reverse;
     }
+
+
 }
 
 

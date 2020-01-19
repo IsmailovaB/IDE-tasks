@@ -5,21 +5,24 @@ import java.util.Arrays;
 
 public class test {
     public static void main(String[] args) {
-//        System.out.println(starOut("He**bhj***l*lo")
-        System.out.println(oneTwo("asdnldvbjk"));
+        int [] n={2,3,13,3,4,13};
+        System.out.println(sum13(n));
     }
-        public static String oneTwo(String str) {
-            String s="";
-            if(str.length()<3) return "";
-//            str = str.substring(1)+str.charAt(0);
-            if(str.length()>=4){
-                for(int i=0; i<str.length()-3; i+=3){
-                    s+=str.substring(i+1,i+3)+str.substring(i);
-                }
-            }
-            return str;
-        }
+    public static int sum13(int[] nums) {
 
+        if(nums.length==0){
+            return 0;
+        }
+        int sum=0;
+        for(int i=0; i< nums.length-1; i++){
+            if(nums[i] == 13){
+                i++;
+            }else {
+                sum += nums[i];
+            }
+        }
+        return sum;
+    }
 
 //             if (str.charAt(i) == '*') {
 //                 continue;

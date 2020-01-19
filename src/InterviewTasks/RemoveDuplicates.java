@@ -1,15 +1,14 @@
 package InterviewTasks;
-
-import codingBat.ArrayList;
-
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
         int [] arr = {3,23,2,23,23,3,3,6,5,2,1,2,4,2,3,4,1};
 //        System.out.println(Arrays.toString(removeDuplicate(arr)));
-        System.out.println(Arrays.toString(removeDuplicat(arr)));
+//        System.out.println(Arrays.toString(removeDuplicat(arr)));
+        removeDupl(arr);
     }
     public static int[] removeDuplicate(int[] arr) {
      int n = 0;
@@ -49,5 +48,31 @@ public class RemoveDuplicates {
             nArr[i] = Integer.parseInt(arrS[i] + "");
         }
         return nArr;
+    }
+    public static void removeDupl(int [] arr){
+        ArrayList<Integer> arrnum = new ArrayList<>();
+
+        for(int i=0; i<arr.length; i++){
+            if(arrnum.contains(arr[i])){
+                continue;
+            }
+            arrnum.add(arr[i]);
+        }
+        System.out.println(arrnum);
+    }
+//==============================================================
+
+    public static  int[] removeDuplicates(int ... arr) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (!numbers.contains(arr[i])) {
+                numbers.add(arr[i]);
+            }
+        }
+        int[] nums = new int[numbers.size()];
+        for (int i = 0; i < numbers.size(); i++) {
+            nums[i] = numbers.get(i);
+        }
+        return nums;
     }
 }

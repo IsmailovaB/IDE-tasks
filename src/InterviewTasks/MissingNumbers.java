@@ -7,8 +7,8 @@ public class MissingNumbers {
 
     public static void main(String[] args) {
         int [] arr = {1,3,4,6,7,8};
-        int miss = missingNum(arr);
-        System.out.println(miss);
+//        int miss = missingNum(arr);
+        missingNum(arr);
     }
 //
 //    public static int getMissingNo(int[] a, int n)
@@ -18,9 +18,26 @@ public class MissingNumbers {
 //            total -= a[i];
 //        return total;
 //    }
-    public static int missingNum(int[] arr){
+    public static void missingNum(int[] arr){
 
         int max = 0;
-        return 0;
+        String s = "";
+        for(int i = 0; i<arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        for(int i = 1; i < max; i++){
+            boolean a = false;
+            for(int j = 0; j < arr.length; j++) {
+                if (arr[j] == i) {
+                    a = true;
+                }
+            }
+                if(!a){
+                    s+=i+" ";
+            }
+        }
+        System.out.println(s.trim());
     }
 }

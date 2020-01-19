@@ -63,7 +63,7 @@ public class Anagram {
         if (a.length() != b.length()) return false;
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < len; j++) {
-                if ((a.charAt(i) + "").equalsIgnoreCase(b.charAt(j) + "")) {
+                if ((a.charAt(i))==(b.charAt(j))) {
                     b = b.replaceFirst(b.charAt(j) + "", " ");
                     count++;
                     break;
@@ -90,5 +90,42 @@ public class Anagram {
             System.out.println(Arrays.toString(arr2));
             return Arrays.equals(arr, arr2);
         }
-    }
 
+
+
+
+        public static void anagramBobbleSort(String w1, String w2){
+
+//            String w1 = "DC BA";
+//            String w2 = "bc da";
+            w1 = w1.toLowerCase().replace(" ","");
+            w2 = w2.toLowerCase().replace(" ","");
+            char[] arrW1 = w1.toCharArray();
+            char[] arrW2 = w2.toCharArray();
+            char temp;
+            for (int i = 0; i < arrW1.length; i++) {
+                for (int j = 0; j < arrW1.length - 1; j++) {
+                    if (arrW1[j] > arrW1[j + 1]) {
+                        temp = arrW1[j];
+                        arrW1[j] = arrW1[j + 1];
+                        arrW1[j + 1] = temp;
+                    }
+                }
+            }
+            for (int i = 0; i < arrW2.length; i++) {
+                for (int j = 0; j < arrW2.length - 1; j++) {
+                    if (arrW2[j] > arrW2[j + 1]) {
+                        temp = arrW2[j];
+                        arrW2[j] = arrW2[j + 1];
+                        arrW2[j + 1] = temp;
+                    }
+                }
+            }
+            System.out.println(arrW1);
+            System.out.println(arrW2);
+            if(Arrays.equals(arrW1,arrW2))
+                System.out.println("Is anagram");
+            else
+                System.out.println("Not anagram");
+        }
+}

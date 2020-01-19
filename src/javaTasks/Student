@@ -1,0 +1,6 @@
+package javaTasks;
+
+import java.util.Scanner;
+
+class Student{
+

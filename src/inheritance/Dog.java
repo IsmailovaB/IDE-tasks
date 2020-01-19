@@ -5,7 +5,7 @@ import encapsulation.App;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Dog {
+public abstract class Dog {
 
      int age;
      String breed;

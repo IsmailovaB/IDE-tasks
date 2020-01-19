@@ -10,6 +10,5 @@ public class ArmstrongNums {
          System.out.println(sum);
      }
  }
-
     }
 }
